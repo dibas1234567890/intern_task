@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ poll }}</title>
+{% include 'header.html' %}
+</head>
+<body>
+    <h1>{{ poll }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Vote</button>
+    </form>
+</body>
+</html>
